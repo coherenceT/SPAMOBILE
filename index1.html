@@ -1546,19 +1546,16 @@
 const djSchedule = [
 [ // Sunday
     { start: [8, 0], end: [13, 0], dj: "Dr Oliver Chigariro", show: "Lovers Lounge", img: "images/dj4.jpg" },
-    { start: [17, 0], end: [20, 0], dj: "DJ Lassi Jamu", show: "Rhythm Connect", img: "images/dj7.jpg" },
-    { start: [20, 0], end: [23, 0], dj: "263 hit Radio RadioGospel Connection", show: "Gospel Show", img: "images/dj6.jpg" }
+    { start: [18, 0], end: [23, 0], dj: "263 hit Radio RadioGospel Connection", show: "Gospel Show", img: "images/dj6.jpg" }
 ],
 [ // Monday
-    { start: [18, 0], end: [21, 0], dj: "DJ Jamza", show: "Massive Monday vibes", img: "images/dj1.jpg" },
-    { start: [21, 0], end: [23, 0], dj: "DJ Warren", show: "Monday Mellow Madness", img: "images/dj5.jpg" }
+    { start: [18, 0], end: [23, 0], dj: "DJ Jamza", show: "Massive Monday vibes", img: "images/dj1.jpg" }
 ],
 [ // Tuesday
     { start: [18, 0], end: [23, 0], dj: "Bamudiki Munya WekwaThela", show: "263 hit Radio RadioConnection", img: "images/dj2.jpg" }
 ],
 [ // Wednesday
-    { start: [18, 0], end: [20, 0], dj: "Steve Ka Sithole", show: "Old School Jams", img: "images/dj3.jpg" },
-    { start: [20, 0], end: [23, 0], dj: "DJ Lassi Jamu", show: "Global Grooves", img: "images/dj7.jpg" }
+    { start: [18, 0], end: [23, 0], dj: "Steve Ka Sithole", show: "Old School Jams", img: "images/dj3.jpg" }
 ],
 [ // Thursday
     { start: [18, 0], end: [23, 0], dj: "Steve Ka Sithole", show: "Old School Jams", img: "images/dj3.jpg" }
@@ -1623,11 +1620,9 @@ setInterval(updateDJImage, 5 * 60 * 1000);
             <a href="#" class="nav-link active" data-page="home">Home</a>
             <a href="#" class="nav-link" data-page="about">About Us</a>
             <a href="#" class="nav-link" data-page="events">Events</a>
-            <a href="#" class="nav-link" data-page="past-events">Past Events</a>
             <a href="#" class="nav-link" data-page="stream">Listening Links</a>
             <a href="#" class="nav-link" data-page="djs">meet the djs</a>
             <a href="#" class="nav-link" data-page="fanbase">Fanbase</a>
-            <a href="#" class="nav-link" data-page="photos">Meet & Mingle Photos</a>
             <a href="#" class="nav-link" data-page="contact">Contact</a>
         </nav>
     </div>
@@ -1893,6 +1888,30 @@ document.addEventListener('DOMContentLoaded', function() {
             });
             </script>
         </div>
+<div class="countdown-container">
+    <h2 class="countdown-title">Countdown to Meet & Mingle Event</h2>
+    <div class="countdown-timer">
+        <div class="countdown-item">
+            <span class="countdown-number" id="days">00</span>
+            <span class="countdown-label">Days</span>
+        </div>
+        <div class="countdown-separator">:</div>
+        <div class="countdown-item">
+            <span class="countdown-number" id="hours">00</span>
+            <span class="countdown-label">Hours</span>
+        </div>
+        <div class="countdown-separator">:</div>
+        <div class="countdown-item">
+            <span class="countdown-number" id="minutes">00</span>
+            <span class="countdown-label">Minutes</span>
+        </div>
+        <div class="countdown-separator">:</div>
+        <div class="countdown-item">
+            <span class="countdown-number" id="seconds">00</span>
+            <span class="countdown-label">Seconds</span>
+        </div>
+    </div>
+</div>
         <!-- Meet the Fans Section -->
         <section class="fans-section">
             <h2 class="section-title">Meet the Fans</h2>
@@ -2130,7 +2149,6 @@ Click www.263hitradio.com and let the love flow"</p>
                 <thead>
                     <tr>
                         <th>Day</th>
-                        <th>Time</th>
                         <th>Show</th>
                         <th>Host</th>
                     </tr>
@@ -2138,67 +2156,41 @@ Click www.263hitradio.com and let the love flow"</p>
                 <tbody>
                     <tr>
                         <td>Monday</td>
-                        <td>18:00–21:00 GMT</td>
                         <td>Massive Monday vibes</td>
                         <td>DJ Jamza</td>
                     </tr>
                     <tr>
-                        <td>Monday</td>
-                        <td>21:00 GMT / 23:00 CAT</td>
-                        <td>Monday Mellow Madness</td>
-                        <td>DJ Warren</td>
-                    </tr>
-                    <tr>
                         <td>Tuesday</td>
-                        <td>18:00–23:00 GMT</td>
                         <td>263 hit Radio RadioConnection</td>
                         <td>Bamdiki Munya WekwaThela</td>
                     </tr>
                     <tr>
                         <td>Wednesday</td>
-                        <td>18:00–20:00 GMT</td>
-                        <td>Old School Jams</td>
+                        <td>Nhubu Diaries</td>
                         <td>Steve Ka Sithole</td>
-                    </tr>
-                    <tr>
-                        <td>Wednesday</td>
-                        <td>22:00–01:00 CAT</td>
-                        <td>Global Grooves</td>
-                        <td>DJ Lassi Jamu</td>
                     </tr>
                     <tr>
                         <td>Thursday</td>
-                        <td>18:00–23:00 GMT</td>
                         <td>Old School Jams</td>
-                        <td>Steve Ka Sithole</td>
+                        <td>Steve Ka Sithole </td>
                     </tr>
                     <tr>
                         <td>Friday</td>
-                        <td>18:00–23:00 GMT</td>
-                        <td>Nhubu Diaries</td>
+                        <td>The Weekend Crossover Show</td>
                         <td>Bamdiki Munya WekwaThela</td>
                     </tr>
                     <tr>
                         <td>Saturday</td>
-                        <td>18:00–23:00 GMT</td>
-                        <td>The Weekend Crossover Show</td>
+                        <td>DJ Mix</td>
                         <td>DJ Warren</td>
                     </tr>
                     <tr>
-                        <td>Sunday</td>
-                        <td>08:00–13:00 GMT</td>
+                        <td>Sunday AM</td>
                         <td>Lovers Lounge</td>
                         <td>Dr Oliver Chigariro</td>
                     </tr>
                     <tr>
-                        <td>Sunday</td>
-                        <td>19:00–22:00 CAT</td>
-                        <td>Rhythm Connect</td>
-                        <td>DJ Lassi Jamu</td>
-                    </tr>
-                    <tr>
-                        <td>Sunday</td>
-                        <td>20:00–23:00 GMT</td>
+                        <td>Sunday PM</td>
                         <td>263 hit Radio RadioGospel Connection</td>
                         <td>Various</td>
                     </tr>
@@ -3391,28 +3383,11 @@ h3 {
                 <div class="dj-info">
                     <h3>DJ Warren</h3>
                     <div class="dj-schedule">
-                        <i class="fas fa-calendar-day"></i> Monday Nights & Saturday Afternoons
+                        <i class="fas fa-calendar-day"></i> Saturday Afternoons
                     </div>
-                    <p class="dj-bio">The young gun bringing fresh energy and the latest chart-toppers to your weekend. Now also bringing mellow vibes to start your week right.</p>
+                    <p class="dj-bio">The young gun bringing fresh energy and the latest chart-toppers to your weekend.</p>
                     <div class="show-name">
-                        <i class="fas fa-microphone"></i> "Monday Mellow Madness & The Weekend Crossover Show"
-                    </div>
-                </div>
-            </div>
-            
-            <!-- DJ Lassi Jamu -->
-            <div class="dj-card">
-                <div class="dj-image-container">
-                    <img src="images/dj7.jpg" alt="DJ Lassi Jamu" class="dj-image">
-                </div>
-                <div class="dj-info">
-                    <h3>DJ Lassi Jamu</h3>
-                    <div class="dj-schedule">
-                        <i class="fas fa-calendar-day"></i> Wednesdays & Sundays
-                    </div>
-                    <p class="dj-bio">International grooves specialist bringing you the best global sounds. Master of world music fusion and cross-cultural beats.</p>
-                    <div class="show-name">
-                        <i class="fas fa-microphone"></i> "Global Grooves & Rhythm Connect"
+                        <i class="fas fa-microphone"></i> "Sounds on Saturday"
                     </div>
                 </div>
             </div>
@@ -3604,137 +3579,6 @@ h3 {
                 </form>
             </div>
             </section>
-
-<!-- Past Events Page -->
-<section id="past-events-page" class="page-section">
-    <div class="glass-card">
-        <h2 class="section-title">🎉 Past Events</h2>
-        <p style="text-align: center; margin-bottom: 30px;">Relive the amazing moments from our previous events!</p>
-        
-        <!-- Band Fusion Event -->
-        <div class="past-event-card">
-            <div class="event-banner">
-                <img src="images/fusionband.jpg" alt="Band Fusion Event" style="width: 100%; height: 400px; object-fit: cover; border-radius: 15px; border: 3px solid var(--primary);">
-            </div>
-            <div class="event-details" style="margin-top: 20px;">
-                <h3 style="color: var(--primary); font-size: 2rem; margin-bottom: 15px;">Band Fusion</h3>
-                <p style="font-size: 1.1rem; line-height: 1.8; color: #e0e0e0;">
-                    An incredible night of live music featuring talented bands from across Zimbabwe. The energy was electric as musicians came together to create unforgettable performances that had the crowd on their feet all night long. From rock to jazz, afrobeat to traditional Zimbabwean sounds, Band Fusion showcased the diversity and richness of our local music scene.
-                </p>
-                <div style="margin-top: 15px; padding: 15px; background: rgba(255, 0, 38, 0.1); border-left: 4px solid var(--primary); border-radius: 8px;">
-                    <p style="margin: 0; color: #ccc;"><strong>Date:</strong> August 2024</p>
-                    <p style="margin: 5px 0 0 0; color: #ccc;"><strong>Venue:</strong> 263 hit Radio Radio Main Stage</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Meet & Mingle Event -->
-        <div class="past-event-card" style="margin-top: 40px;">
-            <div class="event-banner">
-                <img src="images/263hitradioevent.jpg" alt="Meet & Mingle Event" style="width: 100%; height: 400px; object-fit: cover; border-radius: 15px; border: 3px solid var(--primary);">
-            </div>
-            <div class="event-details" style="margin-top: 20px;">
-                <h3 style="color: var(--primary); font-size: 2rem; margin-bottom: 15px;">Meet & Mingle</h3>
-                <p style="font-size: 1.1rem; line-height: 1.8; color: #e0e0e0;">
-                    Our fans came together for an amazing afternoon of music, food, and connection! Meet & Mingle was all about bringing the 263 hit Radio Radio community together in person. Listeners got to meet their favorite DJs, take photos, enjoy live performances, and connect with fellow music lovers. The atmosphere was filled with laughter, great vibes, and the spirit of unity that defines our radio family.
-                </p>
-                <div style="margin-top: 15px; padding: 15px; background: rgba(255, 0, 38, 0.1); border-left: 4px solid var(--primary); border-radius: 8px;">
-                    <p style="margin: 0; color: #ccc;"><strong>Date:</strong> September 2024</p>
-                    <p style="margin: 5px 0 0 0; color: #ccc;"><strong>Venue:</strong> Community Center</p>
-                </div>
-                <div style="margin-top: 20px; text-align: center;">
-                    <a href="#" class="cta" onclick="showPage('photos'); return false;">View Event Photos</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <style>
-        .past-event-card {
-            background: var(--card-bg);
-            padding: 30px;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 0, 38, 0.3);
-            transition: all 0.3s;
-        }
-
-        .past-event-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(255, 0, 38, 0.4);
-        }
-
-        @media (max-width: 768px) {
-            .event-banner img {
-                height: 250px !important;
-            }
-        }
-    </style>
-</section>
-
-<!-- Meet & Mingle Photos Page -->
-<section id="photos-page" class="page-section">
-    <div class="glass-card">
-        <h2 class="section-title">📸 Meet & Mingle Photos</h2>
-        <p style="text-align: center; margin-bottom: 30px;">Check out the amazing moments captured at our Meet & Mingle event!</p>
-        
-        <div class="photo-gallery">
-            <!-- Photo grid will be populated here -->
-            <p style="text-align: center; color: #ccc; font-style: italic;">
-                Photo gallery coming soon! We're preparing approximately 200 images from the event. Stay tuned!
-            </p>
-        </div>
-    </div>
-
-    <style>
-        .photo-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
-        }
-
-        .photo-item {
-            position: relative;
-            aspect-ratio: 1/1;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(255, 0, 38, 0.3);
-            border: 2px solid var(--primary);
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .photo-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .photo-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(255, 0, 38, 0.5);
-        }
-
-        .photo-item:hover img {
-            transform: scale(1.1);
-        }
-
-        @media (max-width: 768px) {
-            .photo-gallery {
-                grid-template-columns: repeat(3, 1fr);
-                gap: 10px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .photo-gallery {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-    </style>
-</section>
-
             </div>
             <script>
             document.addEventListener('DOMContentLoaded', function () {
@@ -3975,6 +3819,36 @@ h3 {
         trackIndex = (trackIndex + 1) % tracks.length;
         trackTitle.textContent = tracks[trackIndex];
     }, 15000);
+
+    const countDownDate = new Date("Sep 13, 2025 12:00:00").getTime();
+    
+    // Update the countdown every 1 second
+    const countdown = setInterval(function() {
+        // Get today's date and time
+        const now = new Date().getTime();
+        
+        // Find the distance between now and the countdown date
+        const distance = countDownDate - now;
+        
+        // Time calculations for days, hours, minutes and seconds
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+        // Display the result
+        document.getElementById("days").textContent = days.toString().padStart(2, '0');
+        document.getElementById("hours").textContent = hours.toString().padStart(2, '0');
+        document.getElementById("minutes").textContent = minutes.toString().padStart(2, '0');
+        document.getElementById("seconds").textContent = seconds.toString().padStart(2, '0');
+        
+        // If the countdown is finished, clear interval
+        if (distance < 0) {
+            clearInterval(countdown);
+            document.querySelector(".countdown-timer").innerHTML = 
+                '<div class="countdown-ended" style="color:#fff; font-size:1.5rem;">The event has started! 🎉</div>';
+        }
+    }, 1000);
     </script>
 </body>
 </html>

@@ -1,0 +1,39 @@
+import pandas as pd
+from datetime import datetime
+from ics import Calendar, Event
+
+# Create the timetable data
+data = {
+    "MODULE": ["CONE", "PROG", "PROG", "ITPP", "INSY", "PROG", "CONE", "ITPP", "CONE", "PROG", "INSY", "ITPP", "CONE"],
+    "TASK": [
+        "ICE TASK 1", "ASSIGN 1", "ICE TASK 1", "ASSIGN 1", "TEST", "TEST", "TEST",
+        "ASSIGN 2", "ASSIGN 1", "EXAM", "EXAM", "EXAM", "EXAM"
+    ],
+    "DATE": [
+        "29-Aug", "4-Sep", "14-Sep", "16-Sep", "25-Sep", "29-Sep", "3-Oct",
+        "15-Oct", "23-Oct", "10-Nov", "13-Nov", "17-Nov", "20-Nov"
+    ]
+}
+
+# Load into DataFrame
+timetable = pd.DataFrame(data)
+
+# Create Calendar
+cal = Calendar()
+
+# Add events to calendar
+for _, row in timetable.iterrows():
+    event = Event()
+    # Parse date (assume year 2025)
+    event_date = datetime.strptime(row["DATE"] + "-2025", "%d-%b-%Y")
+    
+    event.name = f"{row['MODULE']} - {row['TASK']}"
+    event.begin = event_date.strftime("%Y-%m-%d 09:00:00")  # Start at 9AM
+    event.end = event_date.strftime("%Y-%m-%d 10:00:00")    # End at 10AM
+    event.description = f"{row['MODULE']} {row['TASK']}"
+    
+    cal.events.add(event)
+
+# Save to .ics file
+with open("study_timetable.ics", "w") as f:
+    f.writelines(cal.serialize_iter())
