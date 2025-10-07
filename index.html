@@ -1546,6 +1546,7 @@
 const djSchedule = [
 [ // Sunday
     { start: [9, 0], end: [12, 0], dj: "Dr Oliver Chigariro", show: "Lovers Lounge", img: "images/dj4.jpg" },
+    { start: [16, 0], end: [19, 0], dj: "DJ Thembie okaMpangazitha", show: "Gospel Gold", img: "images/dj8.jpg" },
     { start: [19, 0], end: [22, 0], dj: "DJ Lassi Jamu", show: "Rhythm Connect", img: "images/dj7.jpg" }
 ],
 [ // Monday
@@ -1566,6 +1567,7 @@ const djSchedule = [
     { start: [19, 0], end: [23, 0], dj: "Bamudiki Munya WekwaThela", show: "The Weekend Crossover Show", img: "images/dj2.jpg" }
 ],
 [ // Saturday
+    { start: [16, 0], end: [19, 0], dj: "DJ Thembie okaMpangazitha", show: "Mutserendende we Ngoma", img: "images/dj8.jpg" },
     { start: [18, 0], end: [23, 0], dj: "DJ Warren", show: "Sounds on Saturday", img: "images/dj5.jpg" }
 ]
 ];
@@ -2178,6 +2180,12 @@ Click www.263hitradio.com and let the love flow"</p>
                     </tr>
                     <tr>
                         <td>Saturday</td>
+                        <td>16:00–19:00</td>
+                        <td>Mutserendende we Ngoma</td>
+                        <td>DJ Thembie okaMpangazitha</td>
+                    </tr>
+                    <tr>
+                        <td>Saturday</td>
                         <td>18:00–23:00</td>
                         <td>Sounds on Saturday</td>
                         <td>DJ Warren</td>
@@ -2187,6 +2195,12 @@ Click www.263hitradio.com and let the love flow"</p>
                         <td>09:00–12:00</td>
                         <td>Lovers Lounge</td>
                         <td>Dr Oliver Chigariro</td>
+                    </tr>
+                    <tr>
+                        <td>Sunday</td>
+                        <td>16:00–19:00</td>
+                        <td>Gospel Gold</td>
+                        <td>DJ Thembie okaMpangazitha</td>
                     </tr>
                     <tr>
                         <td>Sunday</td>
@@ -2225,38 +2239,7 @@ Click www.263hitradio.com and let the love flow"</p>
 <section id="events-page" class="page-section">
     <div class="event-promo glass-card">
         <h2 class="section-title">Upcoming Events</h2>
-        
-        <!-- Event -->
-        <div class="event-container">
-            <div class="event-banner">
-                <img src="images/263hitradioevent.jpg" alt="263 hit Radio Radio Meet & Mingle Event">
-            </div>
-            <div class="event-details">
-                <h2>🎉 Meet & Mingle - Live Broadcast</h2>
-                <h3>ALICATS | 263 hit Radio Radio</h3>
-                <p>
-                    <strong>Date:</strong> 13 September 2025<br>
-                    <strong>Time:</strong> 12PM - 6PM<br>
-                    <strong>Venue:</strong> Alicats Pub, 11 Seddon Street, Randburg<br>
-                    <strong>RSVP:</strong> Mr Thela: <a href="tel:+27835055714">+27 83 505 5714</a>
-                </p>
-                <p>
-                    Join us for the <strong>263 hit Radio Radio Meet & Mingle</strong>! Enjoy a live broadcast, lots of food and drinks (all free), and connect with the 263 hit Radio FM community.<br>
-                    <strong>Drink responsibly | Right of admission reserved | No under 18</strong>
-                </p>
-                <p class="event-tagline">JOHUSTLEBURG • 263 hit RadioFM RADIO</p>
-
-                <!-- Registration Form -->
-                <div class="registration-form">
-                    <h3>Interested in Attending?</h3>
-                    <form id="meetMingleForm" onsubmit="submitMeetMingle(event)">
-                        <input type="text" id="attendeeName" placeholder="Your Name" required>
-                        <input type="number" id="attendeeCount" placeholder="Number of Attendees" min="1" max="5" required>
-                        <button type="submit" class="cta">Register Interest</button>
-                    </form>
-                </div>
-            </div>
-        </div>
+        <p style="text-align: center; margin-bottom: 30px; color: #e0e0e0;">Stay tuned for exciting upcoming events! Check back soon for announcements.</p>
     </div>
 
 <!-- Removed duplicate countdown block to fix countdown updates -->
@@ -2363,14 +2346,7 @@ Click www.263hitradio.com and let the love flow"</p>
     </style>
 
     <script>
-    function submitMeetMingle(event) {
-        event.preventDefault();
-        const name = document.getElementById('attendeeName').value;
-        const attendees = document.getElementById('attendeeCount').value;
-        const message = `🎉 Meet & Mingle Registration\n\n👤 Name: ${name}\n👥 Attendees: ${attendees}\n📅 Event: Meet & Mingle - Sept 13, 2025`;
-        window.open(`https://wa.me/447850930017?text=${encodeURIComponent(message)}`, '_blank');
-        event.target.reset();
-    }
+
 
     function submitFusionShow(event) {
         event.preventDefault();
@@ -2480,10 +2456,6 @@ Click www.263hitradio.com and let the love flow"</p>
 
         // Dummy event counts for demo (randomized for each month)
         function getEventCount(day, month, year) {
-            // Example: Fusion Band event on July 26, 2025
-            if (year === 2025 && month === 6 && day === 26) return "Fusion Band";
-            // Meet & Mingle event on Sept 13, 2025
-            if (year === 2025 && month === 8 && day === 13) return "Meet & Mingle";
             // Otherwise, random events for demo
             if (day === 0) return "";
             return Math.floor(Math.random() * 10) + 1 + " Events";
@@ -3409,6 +3381,23 @@ h3 {
                 </div>
             </div>
             
+            <!-- DJ Thembie okaMpangazitha -->
+            <div class="dj-card">
+                <div class="dj-image-container">
+                    <img src="images/dj8.jpg" alt="DJ Thembie okaMpangazitha" class="dj-image">
+                </div>
+                <div class="dj-info">
+                    <h3>DJ Thembie okaMpangazitha</h3>
+                    <div class="dj-schedule">
+                        <i class="fas fa-calendar-day"></i> Saturday 16:00–19:00 & Sunday 16:00–19:00 CAT
+                    </div>
+                    <p class="dj-bio">Bringing spiritual vibes and traditional sounds. Master of gospel music and cultural beats that uplift the soul.</p>
+                    <div class="show-name">
+                        <i class="fas fa-microphone"></i> "Mutserendende we Ngoma & Gospel Gold"
+                    </div>
+                </div>
+            </div>
+            
             <!-- Auto DJ -->
             <div class="dj-card">
                 <div class="dj-image-container">
@@ -3614,7 +3603,7 @@ h3 {
                     An incredible night of live music featuring talented bands from across Zimbabwe. The energy was electric as musicians came together to create unforgettable performances that had the crowd on their feet all night long. From rock to jazz, afrobeat to traditional Zimbabwean sounds, Band Fusion showcased the diversity and richness of our local music scene.
                 </p>
                 <div style="margin-top: 15px; padding: 15px; background: rgba(255, 0, 38, 0.1); border-left: 4px solid var(--primary); border-radius: 8px;">
-                    <p style="margin: 0; color: #ccc;"><strong>Date:</strong> August 2024</p>
+                    <p style="margin: 0; color: #ccc;"><strong>Date:</strong> August 2025</p>
                     <p style="margin: 5px 0 0 0; color: #ccc;"><strong>Venue:</strong> 263 hit Radio Radio Main Stage</p>
                 </div>
             </div>
@@ -3631,7 +3620,7 @@ h3 {
                     Our fans came together for an amazing afternoon of music, food, and connection! Meet & Mingle was all about bringing the 263 hit Radio Radio community together in person. Listeners got to meet their favorite DJs, take photos, enjoy live performances, and connect with fellow music lovers. The atmosphere was filled with laughter, great vibes, and the spirit of unity that defines our radio family.
                 </p>
                 <div style="margin-top: 15px; padding: 15px; background: rgba(255, 0, 38, 0.1); border-left: 4px solid var(--primary); border-radius: 8px;">
-                    <p style="margin: 0; color: #ccc;"><strong>Date:</strong> September 2024</p>
+                    <p style="margin: 0; color: #ccc;"><strong>Date:</strong> September 2025</p>
                     <p style="margin: 5px 0 0 0; color: #ccc;"><strong>Venue:</strong> Community Center</p>
                 </div>
                 <div style="margin-top: 20px; text-align: center;">
@@ -3670,10 +3659,115 @@ h3 {
         <p style="text-align: center; margin-bottom: 30px;">Check out the amazing moments captured at our Meet & Mingle event!</p>
         
         <div class="photo-gallery">
-            <!-- Photo grid will be populated here -->
-            <p style="text-align: center; color: #ccc; font-style: italic;">
-                Photo gallery coming soon! We're preparing approximately 200 images from the event. Stay tuned!
-            </p>
+            <div class="photo-item"><img src="images/ADDTEXT1.jpg" alt="Meet & Mingle Photo 1"></div>
+            <div class="photo-item"><img src="images/ADDTEXT2.jpg" alt="Meet & Mingle Photo 2"></div>
+            <div class="photo-item"><img src="images/ADDTEXT3.jpg" alt="Meet & Mingle Photo 3"></div>
+            <div class="photo-item"><img src="images/ADDTEXT4.jpg" alt="Meet & Mingle Photo 4"></div>
+            <div class="photo-item"><img src="images/ADDTEXT5.jpg" alt="Meet & Mingle Photo 5"></div>
+            <div class="photo-item"><img src="images/ADDTEXT6.jpg" alt="Meet & Mingle Photo 6"></div>
+            <div class="photo-item"><img src="images/ADDTEXT7.jpg" alt="Meet & Mingle Photo 7"></div>
+            <div class="photo-item"><img src="images/ADDTEXT8.jpg" alt="Meet & Mingle Photo 8"></div>
+            <div class="photo-item"><img src="images/ADDTEXT9.jpg" alt="Meet & Mingle Photo 9"></div>
+            <div class="photo-item"><img src="images/ADDTEXT10.jpg" alt="Meet & Mingle Photo 10"></div>
+            <div class="photo-item"><img src="images/ADDTEXT11.jpg" alt="Meet & Mingle Photo 11"></div>
+            <div class="photo-item"><img src="images/ADDTEXT12.jpg" alt="Meet & Mingle Photo 12"></div>
+            <div class="photo-item"><img src="images/ADDTEXT13.jpg" alt="Meet & Mingle Photo 13"></div>
+            <div class="photo-item"><img src="images/ADDTEXT14.jpg" alt="Meet & Mingle Photo 14"></div>
+            <div class="photo-item"><img src="images/ADDTEXT15.jpg" alt="Meet & Mingle Photo 15"></div>
+            <div class="photo-item"><img src="images/ADDTEXT16.jpg" alt="Meet & Mingle Photo 16"></div>
+            <div class="photo-item"><img src="images/ADDTEXT17.jpg" alt="Meet & Mingle Photo 17"></div>
+            <div class="photo-item"><img src="images/ADDTEXT18.jpg" alt="Meet & Mingle Photo 18"></div>
+            <div class="photo-item"><img src="images/ADDTEXT19.jpg" alt="Meet & Mingle Photo 19"></div>
+            <div class="photo-item"><img src="images/ADDTEXT20.jpg" alt="Meet & Mingle Photo 20"></div>
+            <div class="photo-item"><img src="images/ADDTEXT21.jpg" alt="Meet & Mingle Photo 21"></div>
+            <div class="photo-item"><img src="images/ADDTEXT22.jpg" alt="Meet & Mingle Photo 22"></div>
+            <div class="photo-item"><img src="images/ADDTEXT23.jpg" alt="Meet & Mingle Photo 23"></div>
+            <div class="photo-item"><img src="images/ADDTEXT24.jpg" alt="Meet & Mingle Photo 24"></div>
+            <div class="photo-item"><img src="images/ADDTEXT25.jpg" alt="Meet & Mingle Photo 25"></div>
+            <div class="photo-item"><img src="images/ADDTEXT26.jpg" alt="Meet & Mingle Photo 26"></div>
+            <div class="photo-item"><img src="images/ADDTEXT27.jpg" alt="Meet & Mingle Photo 27"></div>
+            <div class="photo-item"><img src="images/ADDTEXT28.jpg" alt="Meet & Mingle Photo 28"></div>
+            <div class="photo-item"><img src="images/ADDTEXT29.jpg" alt="Meet & Mingle Photo 29"></div>
+            <div class="photo-item"><img src="images/ADDTEXT30.jpg" alt="Meet & Mingle Photo 30"></div>
+            <div class="photo-item"><img src="images/ADDTEXT31.jpg" alt="Meet & Mingle Photo 31"></div>
+            <div class="photo-item"><img src="images/ADDTEXT32.jpg" alt="Meet & Mingle Photo 32"></div>
+            <div class="photo-item"><img src="images/ADDTEXT33.jpg" alt="Meet & Mingle Photo 33"></div>
+            <div class="photo-item"><img src="images/ADDTEXT34.jpg" alt="Meet & Mingle Photo 34"></div>
+            <div class="photo-item"><img src="images/ADDTEXT35.jpg" alt="Meet & Mingle Photo 35"></div>
+            <div class="photo-item"><img src="images/ADDTEXT36.jpg" alt="Meet & Mingle Photo 36"></div>
+            <div class="photo-item"><img src="images/ADDTEXT37.jpg" alt="Meet & Mingle Photo 37"></div>
+            <div class="photo-item"><img src="images/ADDTEXT38.jpg" alt="Meet & Mingle Photo 38"></div>
+            <div class="photo-item"><img src="images/ADDTEXT39.jpg" alt="Meet & Mingle Photo 39"></div>
+            <div class="photo-item"><img src="images/ADDTEXT40.jpg" alt="Meet & Mingle Photo 40"></div>
+            <div class="photo-item"><img src="images/ADDTEXT41.jpg" alt="Meet & Mingle Photo 41"></div>
+            <div class="photo-item"><img src="images/ADDTEXT42.jpg" alt="Meet & Mingle Photo 42"></div>
+            <div class="photo-item"><img src="images/ADDTEXT43.jpg" alt="Meet & Mingle Photo 43"></div>
+            <div class="photo-item"><img src="images/ADDTEXT44.jpg" alt="Meet & Mingle Photo 44"></div>
+            <div class="photo-item"><img src="images/ADDTEXT45.jpg" alt="Meet & Mingle Photo 45"></div>
+            <div class="photo-item"><img src="images/ADDTEXT46.jpg" alt="Meet & Mingle Photo 46"></div>
+            <div class="photo-item"><img src="images/ADDTEXT47.jpg" alt="Meet & Mingle Photo 47"></div>
+            <div class="photo-item"><img src="images/ADDTEXT48.jpg" alt="Meet & Mingle Photo 48"></div>
+            <div class="photo-item"><img src="images/ADDTEXT49.jpg" alt="Meet & Mingle Photo 49"></div>
+            <div class="photo-item"><img src="images/ADDTEXT50.jpg" alt="Meet & Mingle Photo 50"></div>
+            <div class="photo-item"><img src="images/ADDTEXT51.jpg" alt="Meet & Mingle Photo 51"></div>
+            <div class="photo-item"><img src="images/ADDTEXT52.jpg" alt="Meet & Mingle Photo 52"></div>
+            <div class="photo-item"><img src="images/ADDTEXT53.jpg" alt="Meet & Mingle Photo 53"></div>
+            <div class="photo-item"><img src="images/ADDTEXT54.jpg" alt="Meet & Mingle Photo 54"></div>
+            <div class="photo-item"><img src="images/ADDTEXT55.jpg" alt="Meet & Mingle Photo 55"></div>
+            <div class="photo-item"><img src="images/ADDTEXT56.jpg" alt="Meet & Mingle Photo 56"></div>
+            <div class="photo-item"><img src="images/ADDTEXT57.jpg" alt="Meet & Mingle Photo 57"></div>
+            <div class="photo-item"><img src="images/ADDTEXT58.jpg" alt="Meet & Mingle Photo 58"></div>
+            <div class="photo-item"><img src="images/ADDTEXT59.jpg" alt="Meet & Mingle Photo 59"></div>
+            <div class="photo-item"><img src="images/ADDTEXT60.jpg" alt="Meet & Mingle Photo 60"></div>
+            <div class="photo-item"><img src="images/ADDTEXT61.jpg" alt="Meet & Mingle Photo 61"></div>
+            <div class="photo-item"><img src="images/ADDTEXT62.jpg" alt="Meet & Mingle Photo 62"></div>
+            <div class="photo-item"><img src="images/ADDTEXT63.jpg" alt="Meet & Mingle Photo 63"></div>
+            <div class="photo-item"><img src="images/ADDTEXT64.jpg" alt="Meet & Mingle Photo 64"></div>
+            <div class="photo-item"><img src="images/ADDTEXT65.jpg" alt="Meet & Mingle Photo 65"></div>
+            <div class="photo-item"><img src="images/ADDTEXT66.jpg" alt="Meet & Mingle Photo 66"></div>
+            <div class="photo-item"><img src="images/ADDTEXT67.jpg" alt="Meet & Mingle Photo 67"></div>
+            <div class="photo-item"><img src="images/ADDTEXT68.jpg" alt="Meet & Mingle Photo 68"></div>
+            <div class="photo-item"><img src="images/ADDTEXT69.jpg" alt="Meet & Mingle Photo 69"></div>
+            <div class="photo-item"><img src="images/ADDTEXT70.jpg" alt="Meet & Mingle Photo 70"></div>
+            <div class="photo-item"><img src="images/ADDTEXT71.jpg" alt="Meet & Mingle Photo 71"></div>
+            <div class="photo-item"><img src="images/ADDTEXT72.jpg" alt="Meet & Mingle Photo 72"></div>
+            <div class="photo-item"><img src="images/ADDTEXT73.jpg" alt="Meet & Mingle Photo 73"></div>
+            <div class="photo-item"><img src="images/ADDTEXT74.jpg" alt="Meet & Mingle Photo 74"></div>
+            <div class="photo-item"><img src="images/ADDTEXT75.jpg" alt="Meet & Mingle Photo 75"></div>
+            <div class="photo-item"><img src="images/ADDTEXT76.jpg" alt="Meet & Mingle Photo 76"></div>
+            <div class="photo-item"><img src="images/ADDTEXT77.jpg" alt="Meet & Mingle Photo 77"></div>
+            <div class="photo-item"><img src="images/ADDTEXT78.jpg" alt="Meet & Mingle Photo 78"></div>
+            <div class="photo-item"><img src="images/ADDTEXT79.jpg" alt="Meet & Mingle Photo 79"></div>
+            <div class="photo-item"><img src="images/ADDTEXT80.jpg" alt="Meet & Mingle Photo 80"></div>
+            <div class="photo-item"><img src="images/ADDTEXT81.jpg" alt="Meet & Mingle Photo 81"></div>
+            <div class="photo-item"><img src="images/ADDTEXT82.jpg" alt="Meet & Mingle Photo 82"></div>
+            <div class="photo-item"><img src="images/ADDTEXT83.jpg" alt="Meet & Mingle Photo 83"></div>
+            <div class="photo-item"><img src="images/ADDTEXT84.jpg" alt="Meet & Mingle Photo 84"></div>
+            <div class="photo-item"><img src="images/ADDTEXT85.jpg" alt="Meet & Mingle Photo 85"></div>
+            <div class="photo-item"><img src="images/ADDTEXT86.jpg" alt="Meet & Mingle Photo 86"></div>
+            <div class="photo-item"><img src="images/ADDTEXT87.jpg" alt="Meet & Mingle Photo 87"></div>
+            <div class="photo-item"><img src="images/ADDTEXT88.jpg" alt="Meet & Mingle Photo 88"></div>
+            <div class="photo-item"><img src="images/ADDTEXT89.jpg" alt="Meet & Mingle Photo 89"></div>
+            <div class="photo-item"><img src="images/ADDTEXT90.jpg" alt="Meet & Mingle Photo 90"></div>
+            <div class="photo-item"><img src="images/ADDTEXT91.jpg" alt="Meet & Mingle Photo 91"></div>
+            <div class="photo-item"><img src="images/ADDTEXT92.jpg" alt="Meet & Mingle Photo 92"></div>
+            <div class="photo-item"><img src="images/ADDTEXT93.jpg" alt="Meet & Mingle Photo 93"></div>
+            <div class="photo-item"><img src="images/ADDTEXT94.jpg" alt="Meet & Mingle Photo 94"></div>
+            <div class="photo-item"><img src="images/ADDTEXT95.jpg" alt="Meet & Mingle Photo 95"></div>
+            <div class="photo-item"><img src="images/ADDTEXT96.jpg" alt="Meet & Mingle Photo 96"></div>
+            <div class="photo-item"><img src="images/ADDTEXT97.jpg" alt="Meet & Mingle Photo 97"></div>
+            <div class="photo-item"><img src="images/ADDTEXT98.jpg" alt="Meet & Mingle Photo 98"></div>
+            <div class="photo-item"><img src="images/ADDTEXT99.jpg" alt="Meet & Mingle Photo 99"></div>
+            <div class="photo-item"><img src="images/ADDTEXT100.jpg" alt="Meet & Mingle Photo 100"></div>
+            <div class="photo-item"><img src="images/ADDTEXT101.jpg" alt="Meet & Mingle Photo 101"></div>
+            <div class="photo-item"><img src="images/ADDTEXT102.jpg" alt="Meet & Mingle Photo 102"></div>
+            <div class="photo-item"><img src="images/ADDTEXT103.jpg" alt="Meet & Mingle Photo 103"></div>
+            <div class="photo-item"><img src="images/ADDTEXT104.jpg" alt="Meet & Mingle Photo 104"></div>
+            <div class="photo-item"><img src="images/ADDTEXT105.jpg" alt="Meet & Mingle Photo 105"></div>
+            <div class="photo-item"><img src="images/ADDTEXT106.jpg" alt="Meet & Mingle Photo 106"></div>
+            <div class="photo-item"><img src="images/ADDTEXT107.jpg" alt="Meet & Mingle Photo 107"></div>
+            <div class="photo-item"><img src="images/ADDTEXT108.jpg" alt="Meet & Mingle Photo 108"></div>
+            <div class="photo-item"><img src="images/ADDTEXT109.jpg" alt="Meet & Mingle Photo 109"></div>
         </div>
     </div>
 
@@ -3687,7 +3781,7 @@ h3 {
 
         .photo-item {
             position: relative;
-            aspect-ratio: 1/1;
+            aspect-ratio: 5/3;
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 4px 15px rgba(255, 0, 38, 0.3);
